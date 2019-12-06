@@ -143,10 +143,11 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
   color: white; 
 }  
 .fa-book {   
-  color: white; 
+  color: #504B3A;
+  float: right;
 }  
 .fa:hover {   
-  color: red; 
+  color: #DDE392; 
 }  
 
 /* Background Images */ 
@@ -373,7 +374,7 @@ macros.inv = {
 
 // Import Font Awesome
 // Used for Save/Restart/Log icons
-importStyles('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');</script><tw-passagedata pid="1" name="Game Start" tags="intro" position="2907,818.3333333333334" size="100,100">&lt;&lt;set $this to 0&gt;&gt;\
+importStyles('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');</script><tw-passagedata pid="1" name="Game Start" tags="intro" position="2907,818" size="100,100">&lt;&lt;set $this to 0&gt;&gt;\
 &lt;&lt;set $necklace to 0&gt;&gt;\
 &lt;&lt;set $test to 0&gt;&gt;\
 Welcome to [Project Goats, name pending]
@@ -413,6 +414,7 @@ To Start the Story
 &lt;&lt;cacheaudio &quot;CN&quot; &quot;media/music/Tracks/Act_II/CN.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;NE&quot; &quot;media/music/Tracks/Act_II/NE.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;CNE&quot; &quot;media/music/Tracks/Act_II/CNE.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;CE&quot; &quot;media/music/Tracks/Act_II/CE.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;CS&quot; &quot;media/music/Tracks/Act_II/CS.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;B&quot; &quot;media/music/Tracks/Act_II/B.mp3&quot;&gt;&gt;\
 &lt;&lt;cacheaudio &quot;B2&quot; &quot;media/music/Tracks/Act_II/B2.mp3&quot;&gt;&gt;\
@@ -456,23 +458,28 @@ You wander the deck, shaking either from the chill wind or anticipation. You pul
 &lt;&lt;audio &quot;Fresh-Air&quot; loop play volume 0&gt;&gt;\
 &lt;&lt;audio &quot;A-New-Friend&quot; loop play volume 0&gt;&gt;\
 
-[[Fort Quebec-&gt;Act 1]]
-
+[[Fort Quebec-&gt;Act 1]]\
 &lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
 	&lt;&lt;script&gt;&gt;
 		Dialog.setup(&#39;Journal&#39;);
 		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
 		Dialog.open();
 	&lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Act 1" tags="intro" position="2389,826" size="100,100">The wood of the old ship frantically vibrates with movement. You hear the commotion from the top deck, the hoarse voice of the commanding officer flog out commands to the sailors. You pause to take notice of the cramped cabin quarters they provided you two months ago. The fleeting feeling of home it provided you. You take a deep breath ... and glance over the small rectangular room one last time. You drop a small gold coin while giving thanks to the seafarer&#39;s for the safe passage.
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Act 1" tags="intro" position="2387.3333333333335,826" size="100,100">The wood of the old ship frantically vibrates with movement. You hear the commotion from the top deck, the hoarse voice of the commanding officer flog out commands to the sailors. You pause to take notice of the cramped cabin quarters they provided you two months ago. The fleeting feeling of home it provided you. You take a deep breath ... and glance over the small rectangular room one last time. You drop a small gold coin while giving thanks to the seafarer&#39;s for the safe passage.
 
 You leave the //HMS Squallor&#39;s Respite// not knowing you will ever see them again.\
 
 &lt;!--&quot;Land-Ahoy&quot; - Still looping here--&gt;\
 &lt;&lt;audio &quot;Land-Ahoy&quot; loop play&gt;&gt;\
 
-[[Montreal (South East)]] 
-&lt;&lt;inv&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Montreal (South East)" tags="fort_image" position="2231,830" size="100,100">The docks, or the lack thereof as the ship came up against the stone embankment, spread out around you. A wharf, you remember the sailors calling it. People bustle back and forth, in and out of the warehouses and buildings around you. They remind you of your quest for the goat, and your need to go west.
+[[Montreal (South East)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Montreal (South East)" tags="fort_image" position="2231,828.3333333333334" size="100,100">The docks, or the lack thereof as the ship came up against the stone embankment, spread out around you. A wharf, you remember the sailors calling it. People bustle back and forth, in and out of the warehouses and buildings around you. They remind you of your quest for the goat, and your need to go west.
 
 You are on the south east part of the city. Montréal stretches to the north and spreads out to the west. Immediately west is a large set of building and its accompanying grounds. To the north, more warehouses line the river&#39;s edge.\
 \
@@ -481,7 +488,14 @@ You are on the south east part of the city. Montréal stretches to the north and
 &lt;&lt;audio &quot;QCSE&quot; fadeoverto 2 3&gt;&gt;\
 
 [[North-&gt;Montreal (East)]]
-[[West-&gt;Montreal (South)]] </tw-passagedata><tw-passagedata pid="5" name="Montreal (North)" tags="fort_image" position="2073,539" size="100,100">You exit the city proper. The residences around you are far more sparse with larger stakes of land than in the city. There is not much around of interest to you.
+[[West-&gt;Montreal (South)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Montreal (North)" tags="fort_image" position="2071.3333333333335,537.3333333333334" size="100,100">You exit the city proper. The residences around you are far more sparse with larger stakes of land than in the city. There is not much around of interest to you.
 
 Standing on the northern edge of the city. You notice the center of Montréal to the south, with a church as its focal point. To the west you spot a new church under construction. A shipyard and the St. Lawrence river lie to the east.\
 \
@@ -491,7 +505,14 @@ Standing on the northern edge of the city. You notice the center of Montréal to
 
 [[East-&gt;Montreal (North East)]] 
 [[West-&gt;Montreal (North West)]] 
-[[South-&gt;Montreal (Center)]] </tw-passagedata><tw-passagedata pid="6" name="Montreal (South)" tags="fort_image" position="2092,831" size="100,100">Common people mill about on their own business, but you are happy to see some students about. There is a spattering of residences and stores around but college grounds dominate the area. A blessing it is to have proper teaching this far north in the New World. Not straying far from the streets around the college, you do not find anything that can help you on your quest. 
+[[South-&gt;Montreal (Center)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Montreal (South)" tags="fort_image" position="2092,829.3333333333334" size="100,100">Common people mill about on their own business, but you are happy to see some students about. There is a spattering of residences and stores around but college grounds dominate the area. A blessing it is to have proper teaching this far north in the New World. Not straying far from the streets around the college, you do not find anything that can help you on your quest. 
 
 You wander around the southern edge of the city and to the east is the docks with ships and their masts standing tall. To the north is the main part of the city with a church marking its center. To the west Montréal begins to end, with farm land extending past the edge of the city. Further south stretches a suburb, but you feel that you should stay within the city proper.\
 \
@@ -500,7 +521,14 @@ You wander around the southern edge of the city and to the east is the docks wit
 
 [[North-&gt;Montreal (Center)]] 
 [[East-&gt;Montreal (South East)]] 
-[[West-&gt;Montreal (South West)]] </tw-passagedata><tw-passagedata pid="7" name="Montreal (West)" tags="fort_image" position="1941,680" size="100,100">You follow along one of the two streets that extend particularly far west out of the main part of the city.  Not much more takes your interest in this suburb of Montréal. 
+[[West-&gt;Montreal (South West)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Montreal (West)" tags="fort_image" position="1939.3333333333333,678.3333333333334" size="100,100">You follow along one of the two streets that extend particularly far west out of the main part of the city.  Not much more takes your interest in this suburb of Montréal. 
 
 East of you lies the church and the center of Montréal. South of you Montréal has its southwestern edge. North of you is the edge of the city continues. Even further west and the land rises as the river valley ended. You want to start the journey west but your anxiety about the unknown land keeps you close to the city proper, until you find a guide of course.\
 \
@@ -511,7 +539,14 @@ East of you lies the church and the center of Montréal. South of you Montréal 
  
 [[North-&gt;Montreal (North West)]] 
 [[East-&gt;Montreal (Center)]] 
-[[South-&gt;Montreal (South West)]] </tw-passagedata><tw-passagedata pid="8" name="Montreal (North West)" tags="fort_image" position="1940,548" size="100,100">Taking your paces around the edge of Montréal, you come across a church under construction. Around you are only residences, with the new church bishop&#39;s residence being by far the largest around you. Yet there are no people around you.
+[[South-&gt;Montreal (South West)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; </tw-passagedata><tw-passagedata pid="8" name="Montreal (North West)" tags="fort_image" position="1940,548" size="100,100">Taking your paces around the edge of Montréal, you come across a church under construction. Around you are only residences, with the new church bishop&#39;s residence being by far the largest around you. Yet there are no people around you.
 
 You are on the northwestern edge of the city. To the south Montréal seems to protrude to the wall of the river valley. To the east is a spattering of residences.\
 \
@@ -520,7 +555,14 @@ You are on the northwestern edge of the city. To the south Montréal seems to pr
 &lt;&lt;audio &quot;QCNW&quot; fadeoverto 2 3&gt;&gt;
 
 [[East-&gt;Montreal (North)]] 
-[[South-&gt;Montreal (West)]] </tw-passagedata><tw-passagedata pid="9" name="Montreal (East)" tags="fort_image" position="2217,678" size="100,100">You walk along the river&#39;s edge. Warehouses stretch along the cobbled street with a hotel marking the southern end and a fish market marking the other. Populated by workers moving goods.
+[[South-&gt;Montreal (West)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; </tw-passagedata><tw-passagedata pid="9" name="Montreal (East)" tags="fort_image" position="2217,678" size="100,100">You walk along the river&#39;s edge. Warehouses stretch along the cobbled street with a hotel marking the southern end and a fish market marking the other. Populated by workers moving goods.
 
 You are on the eastern edge of the city. The west is the heart of Montréal, with a church and its grounds being the centerpiece. The city of Montréal continues north. South of you is where your ship landed and is currently moored.\
 \
@@ -530,7 +572,14 @@ You are on the eastern edge of the city. The west is the heart of Montréal, wit
 
 [[North-&gt;Montreal (North East)]] 
 [[West-&gt;Montreal (Center)]] 
-[[South-&gt;Montreal (South East)]] </tw-passagedata><tw-passagedata pid="10" name="Montreal (Center)" tags="fort_image" position="2087,669" size="100,100">You come upon the heart of Montréal with the church and its holy grounds being the main attraction. Along with the church you see a few stores whose signs catch your eye. One sign stands out in particular, with a stack of furs on it and large N.W.C lettering embroidered just above its windows. The finest hats in England used the furs from Canada and, while not with you now, you cherish your own top hat of Canadian fur back home. You feel as though a store like that would be able to help you.
+[[South-&gt;Montreal (South East)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Montreal (Center)" tags="fort_image" position="2087,670.6666666666666" size="100,100">You come upon the heart of Montréal with the church and its holy grounds being the main attraction. Along with the church you see a few stores whose signs catch your eye. One sign stands out in particular, with a stack of furs on it and large N.W.C lettering embroidered just above its windows. The finest hats in England used the furs from Canada and, while not with you now, you cherish your own top hat of Canadian fur back home. You feel as though a store like that would be able to help you.
 
 Standing at the center of Montréal, you see the city spread in all directions.\
 \
@@ -544,7 +593,14 @@ Standing at the center of Montréal, you see the city spread in all directions.\
 [[North-&gt;Montreal (North)]] 
 [[East-&gt;Montreal (East)]] 
 [[West-&gt;Montreal (West)]] 
-[[South-&gt;Montreal (South)]] </tw-passagedata><tw-passagedata pid="11" name="Montreal (North East)" tags="fort_image" position="2223,543" size="100,100">You arrive to a suburb along the bank of the river. On the edge of the city you spot a small shipyard, that has a small vessel undergoing repairs. Giving the air a smell, underneath the familiar stink of the city belies roasted grains and hops. A brewery lies beside the shipyard. You wander around some more.
+[[South-&gt;Montreal (South)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; </tw-passagedata><tw-passagedata pid="11" name="Montreal (North East)" tags="fort_image" position="2223,543" size="100,100">You arrive to a suburb along the bank of the river. On the edge of the city you spot a small shipyard, that has a small vessel undergoing repairs. Giving the air a smell, underneath the familiar stink of the city belies roasted grains and hops. A brewery lies beside the shipyard. You wander around some more.
 
 You are on the northeastern edge of Montréal. South of you are a line of warehouses, and to the west is a spattering of farm houses.\
 \
@@ -553,7 +609,14 @@ You are on the northeastern edge of Montréal. South of you are a line of wareho
 &lt;&lt;audio &quot;QCNE&quot; fadeoverto 2 3&gt;&gt;
 
 [[West-&gt;Montreal (North)]] 
-[[South-&gt;Montreal (East)]]</tw-passagedata><tw-passagedata pid="12" name="Montreal (South West)" tags="fort_image" position="1944,836" size="100,100">You come close to the edge of Montréal. There is a small market area with some activity at the end of a wide street from the wharfs. You wander the stalls that are open and talk with some of the people. Your English accented French puts the locals off from talking to you for longer than what is courteous. You hear that you can go to the center of Montréal to find the help you are looking for.
+[[South-&gt;Montreal (East)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Montreal (South West)" tags="fort_image" position="1944,836" size="100,100">You come close to the edge of Montréal. There is a small market area with some activity at the end of a wide street from the wharfs. You wander the stalls that are open and talk with some of the people. Your English accented French puts the locals off from talking to you for longer than what is courteous. You hear that you can go to the center of Montréal to find the help you are looking for.
 
 You are on the southwestern edge of Montréal. To the north is the western edge of the city proper, with more suburbs. East of you is the college area of Montréal. To the west, suburbs and farmland extend to the river valley wall. You long to travel in that direction, but you need a guide or at the very least supplies to go any further west.\
 \
@@ -562,13 +625,27 @@ You are on the southwestern edge of Montréal. To the north is the western edge 
 &lt;&lt;audio &quot;QCS&quot; fadeoverto 2 3&gt;&gt;
 
 [[North-&gt;Montreal (West)]] 
-[[East -&gt;Montreal (South)]] </tw-passagedata><tw-passagedata pid="13" name="inv" tags="" position="2391,669" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Fur Trade Shop (1)" tags="fort_image" position="1714,530" size="100,100">You walk into the shop with the North West Company crest above the door. The warmth of the shop&#39;s front is as pleasant as the old shopkeeper&#39;s english accented &quot;bonjour!&quot;. You stamp your feet to knock of any debris and look around. You see the shopkeeper and another man, with light brown skin talking. There are several other people around, inspecting furs and other goods, while a few look around, waiting impatiently.
+[[East -&gt;Montreal (South)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; </tw-passagedata><tw-passagedata pid="13" name="inv" tags="" position="2391,669" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Fur Trade Shop (1)" tags="fort_image" position="1714,530" size="100,100">You walk into the shop with the North West Company crest above the door. The warmth of the shop&#39;s front is as pleasant as the old shopkeeper&#39;s english accented &quot;bonjour!&quot;. You stamp your feet to knock of any debris and look around. You see the shopkeeper and another man, with light brown skin talking. There are several other people around, inspecting furs and other goods, while a few look around, waiting impatiently.
 
 You approach the front counter as another Frenchman comes out to the people waiting, speaks and leaves with them outside. After just a moment of waiting the man you took as the shopkeeper approaches you from the other side of the counter.
 
 &quot;How can I help you today?&quot; asks the shopkeeper.
 
-&quot;I am looking for some advice. P-potentially some supplies.&quot; [[You reply, with the cold still on your jaw.-&gt;Fur Trade Shop (2)]]
+&quot;I am looking for some advice. P-potentially some supplies.&quot; [[You reply, with the cold still on your jaw.-&gt;Fur Trade Shop (2)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;audio &quot;Wonderland&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;Ye-Old&quot; fadeoverto 2 0&gt;&gt;\
@@ -578,17 +655,45 @@ You approach the front counter as another Frenchman comes out to the people wait
 &lt;&lt;audio &quot;Wonderland&quot; fadeoverto 2 3&gt;&gt;\ 
  
 [[Continue heading west-&gt;Quebec Wilderness (River)]]
-[[Take the broken trail-&gt;Cree Camp (1)]]</tw-passagedata><tw-passagedata pid="16" name="Quebec Farmland" tags="wilderness" position="1494,701" size="100,100">You cannot see the Cree camp, all you see is fencing that marks each farmer’s property. The glimmering patches of snow and the farmland winds howls into your ears as a reminder of the cold harsh winter that passed. Earthly toned patches of land point you back to the way you came.
+[[Take the broken trail-&gt;Cree Camp (1)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Quebec Farmland" tags="wilderness" position="1494,701" size="100,100">You cannot see the Cree camp, all you see is fencing that marks each farmer’s property. The glimmering patches of snow and the farmland winds howls into your ears as a reminder of the cold harsh winter that passed. Earthly toned patches of land point you back to the way you came.
 
-[[West-&gt;Quebec Wilderness]]
+[[West-&gt;Quebec Wilderness]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;audio &quot;Shop&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;Farmland&quot; fadeoverto 2 3&gt;&gt;
 </tw-passagedata><tw-passagedata pid="17" name="Quebec Wilderness (River)" tags="wilderness_2" position="1356,843" size="100,100">You arrive to a clearing only to be greeted by the glug of water against the riverside rocks. The water sweeps and slides, scraping the sides of the tortured rocks creating a vortex of mist wetting the air. There is nothing to see here, but what is before you. Your eyes survey the area following the curvature of the meander. You feel a bit high up, you use a sapling to look further down the river. After a quick, unsteady glance upstream, you see a series of beached canoes.
 
-[[Travel alongside the meander-&gt;Cree Camp (1)]]</tw-passagedata><tw-passagedata pid="18" name="Cree Camp (1)" tags="camp" position="1191,711" size="100,100">You notice a camp of oddly shaped huts. As you walk closer you see fish dangling from wooden racks but strangely, you don&#39;t smell them. Instead, your stomach growls as you catch the scent of a lovely duck roasting over a spit. Sounds of language fill your ears, a strange kind of people speaking a strange foreign language. You approach the first person you see, it&#39;s an elderly lady.
+[[Travel alongside the meander-&gt;Cree Camp (1)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Cree Camp (1)" tags="camp" position="1191,711" size="100,100">You notice a camp of oddly shaped huts. As you walk closer you see fish dangling from wooden racks but strangely, you don&#39;t smell them. Instead, your stomach growls as you catch the scent of a lovely duck roasting over a spit. Sounds of language fill your ears, a strange kind of people speaking a strange foreign language. You approach the first person you see, it&#39;s an elderly lady.
  
-[[Speak with the elderly lady-&gt;Cree Camp (2)]] 
+[[Speak with the elderly lady-&gt;Cree Camp (2)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;&lt;audio &quot;Wonderland&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;Fresh-Air&quot; fadeoverto 2 3&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Cree Camp (2)" tags="camp" position="1189,838" size="100,100">Loudly, you speak up, &quot;tân’si!&quot;
@@ -605,8 +710,15 @@ Awestruck by the young man&#39;s ability to speak fluent English, you lock eyes 
 &lt;&lt;audio &quot;Wonderland&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;A-New-Friend&quot; fadeoverto 2 3&gt;&gt;\
 
-[[Abruptly you speak up and ask-&gt;Cree Camp(3)]]
-</tw-passagedata><tw-passagedata pid="20" name="Thunder Bay C" tags="act_2_tb_c" position="2692,1318.3333333333333" size="100,100">The sun warms the ground, the air and your bones alike. Spring is in the air and you stand in the central camp area. A large fire burns at the center of the web of wigwams and well tempered foot paths. 
+[[Abruptly you speak up and ask-&gt;Cree Camp(3)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="20" name="Thunder Bay C" tags="act_2_tb_c" position="2692,1318" size="100,100">The sun warms the ground, the air and your bones alike. Spring is in the air and you stand in the central camp area. A large fire burns at the center of the web of wigwams and well tempered foot paths. 
 
 As the campfire crackles, your eyes follow a column of smoke rising into the sky. You feel the warmth of the sun on your pale skin. You wish to continue your journey, but notice Wind helping a couple of the elders in the camp. You don’t know enough Cree to confidently speak to the other tribespeople, it seems that Wind is your only avenue of quality communication at the moment.
 
@@ -615,7 +727,14 @@ You stand in the center of camp it stretches to the south where one can easily c
 [[Thunder Bay N]]
 [[Thunder Bay E]]
 [[Thunder Bay W]]
-[[Thunder Bay Fishing]]
+[[Thunder Bay Fishing]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;if $talkedToWind eq 0&gt;&gt;\
 [[Talk to Wind-&gt;Wind Convo 1]]\
@@ -643,25 +762,39 @@ Sîsîpa looks busy.\
 &lt;&lt;audio &quot;CE&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;CS&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;CN&quot; fadeoverto 2 0&gt;&gt;\
-&lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="Thunder Bay N" tags="act_2_tb_n" position="2798.3333333333335,1209" size="100,100">You stand outside of your small wigwam, taking in the spring air. Looking around yourself, you feel a pull to start the next leg of your journey amids the spattering of wigwams. 
+&lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="Thunder Bay N" tags="act_2_tb_n" position="2798,1209" size="100,100">You stand outside of your small wigwam, taking in the spring air. Looking around yourself, you feel a pull to start the next leg of your journey amids the spattering of wigwams. 
 
 You are on the northern edge of camp. To the south is the center of camp. The shoreline of the lake, with the camp extending to it, is to the east. To the west, the camp spreads to an edge of a field brush and stone.
 
 [[Thunder Bay C]]
 [[Thunder Bay E]]
-[[Thunder Bay W]]
+[[Thunder Bay W]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;!--&quot;CN&quot; - Still looping here--&gt;\
 &lt;&lt;audio &quot;CN&quot; fadeoverto 2 3&gt;&gt;\
-&lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="22" name="Plains 12" tags="" position="1201,1690.6666666666665" size="100,100">Double-click this passage to edit it.
+&lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="22" name="Plains 12" tags="" position="1201,1690" size="100,100">Double-click this passage to edit it.
 
-&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="23" name="Thunder Bay E" tags="act_2_tb_e" position="2841.3333333333335,1413" size="100,100">You are greeted by the light lapping of waves from the shoreline of the great lake. Along the beach, there are canoes that you used, laying upside down. The beach itself is pebbly, indicative of the stone that seems to make up a large part of the ground here. A coolness clings to the air around the water.
+&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="23" name="Thunder Bay E" tags="act_2_tb_e" position="2839.3333333333335,1414.6666666666667" size="100,100">You are greeted by the light lapping of waves from the shoreline of the great lake. Along the beach, there are canoes that you used, laying upside down. The beach itself is pebbly, indicative of the stone that seems to make up a large part of the ground here. A coolness clings to the air around the water.
 
 You are west of the camp center. To your west is the river with fishing past its delta. A path leads from the lakeshore to the northern edge of camp, where your wigwam is.
 
 [[Thunder Bay C]]
 [[Thunder Bay N]]
-[[Thunder Bay Fishing]]
+[[Thunder Bay Fishing]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;!-- Stop other audio and play correct track --&gt;\
 &lt;&lt;audio &quot;CN&quot; fadeoverto 2 0&gt;&gt;\
@@ -675,10 +808,17 @@ After an hour or so of walking you come to a clearing. Small and medium stones w
 
 It did not take long to cross the clearing and as you travelled west you encountered a couple of smaller clearings with similar outlines of animals made with stones. Wind stayed quiet for the rest of the day.
 
-[[Interlude 2]]
+[[Interlude 2]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;audio &quot;Petroforms&quot; fadeoverto 2 3&gt;&gt;\
-&lt;&lt;audio &quot;FIRE&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="25" name="Brush W" tags="act_2_fields" position="2404.3333333333335,1278" size="100,100">Hard stone meets your feet as tall brush reaches to your face. A few paths weave through brush and breaks in the flora reveal patches of lichen littered stone. You have noticed how rocky the ground has been on the west end of the Great Lakes, as if giants planted stone needs long ago.
+&lt;&lt;audio &quot;FIRE&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="25" name="Brush W" tags="act_2_fields" position="2404,1278" size="100,100">Hard stone meets your feet as tall brush reaches to your face. A few paths weave through brush and breaks in the flora reveal patches of lichen littered stone. You have noticed how rocky the ground has been on the west end of the Great Lakes, as if giants planted stone needs long ago.
 
 You are in the brush west of the camp. To the north lies more tall brush, and even farther north, sprawling fields. To the east is the west edge of camp. To the west, the rocky outcroppings, trees and brush continue.  
 
@@ -686,7 +826,14 @@ You are in the brush west of the camp. To the north lies more tall brush, and ev
 
 [[Brush N]]
 
-[[Canadian Shield 1]]
+[[Canadian Shield 1]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;audio &quot;CNE&quot; fadeoverto 2 3&gt;&gt;\
 &lt;&lt;audio &quot;CN&quot; fadeoverto 2 0&gt;&gt;\
@@ -695,9 +842,16 @@ You are in the brush west of the camp. To the north lies more tall brush, and ev
 
 To your east, from where you came, is more of the rock that carpets this area of wilderness. Farther east is the camp. You don&#39;t feel comfortable to start heading farther west.
 
-[[Canadian Shield 1]] 
+[[Canadian Shield 1]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
-&lt;!--&quot;CS&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="27" name="Observing Animal Fields" tags="act_2_fields" position="2337.666666666667,1047.3333333333333" size="100,100">A well worn path takes you out of the tall brush. A rolling fields fall away before you. In the horizon, vague shapes of an animal herd can be made out. These wide fields are much like the grazing fields for sheep and cows back in England, but not restricted with the stone fences marking property. These animals range freely and it is the people who move with them instead of restricting the herd.
+&lt;!--&quot;CS&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="27" name="Observing Animal Fields" tags="act_2_fields" position="2337,1047" size="100,100">A well worn path takes you out of the tall brush. A rolling fields fall away before you. In the horizon, vague shapes of an animal herd can be made out. These wide fields are much like the grazing fields for sheep and cows back in England, but not restricted with the stone fences marking property. These animals range freely and it is the people who move with them instead of restricting the herd.
 
 Between you and the animals you spot a few --men/women-- of the tribe keeping eyes on the herd. You make your way to one of the closer people.
 
@@ -705,7 +859,14 @@ Between you and the animals you spot a few --men/women-- of the tribe keeping ey
 
 This is the --word--, the observing fields for animals and in this case it is a herd of --animal name--.  
 
-[[Brush N]]
+[[Brush N]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 &lt;&lt;if $talkedToWind eq 1 and $talkedToOAF eq 1&gt;&gt;\
 The people look busy.\
 &lt;&lt;elseif $talkedToWind eq 1&gt;&gt;\
@@ -720,9 +881,15 @@ You are on the west edge of camp, bordering the tall brush. Paths stretch west d
 [[Thunder Bay N]]
 [[Thunder Bay C]]
 [[Thunder Bay Fishing]]
-
 [[Brush N]]
-[[Brush W]]
+[[Brush W]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;!--&quot;CN&quot; - Still looping here--&gt;\
 &lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 0&gt;&gt;\
@@ -739,22 +906,36 @@ But before you could ask why you could finally noticed the smell of smoke in the
 
 Both Wind and yourself start running north. A large almost bare hill of rock comes into view and you make for its summit. Looking back in the direction of your campsite you see the wildfire move through. The start of the fire looks to have jumped the river only a quarter mile upstream of where you were stopped for the night.
 
-[[Canadian Shield 4]] 
+[[Canadian Shield 4]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;&lt;audio &quot;FIRE&quot; fadeoverto 2 3&gt;&gt;\
-&lt;&lt;audio &quot;CS&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="30" name="Brush N" tags="act_2_fields" position="2478.3333333333335,1152.6666666666667" size="100,100">You stand on a slight hill of stone that pokes out of the brush. Surrounding you is the same dry yellow brush uncrushed from the winter&#39;s snow. Looking around, you see some green near the base of the tall grass shoots and some green on the tips of branches. From here you see the ground rise slightly, obscuring the fields that you couldn&#39;t see from camp.
+&lt;&lt;audio &quot;CS&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="30" name="Brush N" tags="act_2_fields" position="2478,1152" size="100,100">You stand on a slight hill of stone that pokes out of the brush. Surrounding you is the same dry yellow brush uncrushed from the winter&#39;s snow. Looking around, you see some green near the base of the tall grass shoots and some green on the tips of branches. From here you see the ground rise slightly, obscuring the fields that you couldn&#39;t see from camp.
 
 You are in the northern section of brush bordering the camp. To the east is the western edge of camp and to the north are some fields.
 
 [[Thunder Bay W]]
 
 [[Brush W]]
-[[Observing Animal Fields]] 
+[[Observing Animal Fields]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;&lt;audio &quot;B&quot; fadeoverto 2 3&gt;&gt;\
 &lt;&lt;audio &quot;B2&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;CN&quot; fadeoverto 2 0&gt;&gt;\
-&lt;&lt;audio &quot;CNE&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="31" name="Thunder Bay Fishing" tags="act_2_tb_fish" position="2640.6666666666665,1499" size="100,100">You come a fair ways upstream from the mouth of the river. The quiet swishing of the running water is highly familiar at this point. Just a bit farther along the north bank stand the of nets used to catch fish. Some trees provide on the bank provide shade from the warming sun above, but fail to stop the dazzling lights of the sun&#39;s reflection. 
+&lt;&lt;audio &quot;CNE&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="31" name="Thunder Bay Fishing" tags="act_2_tb_fish" position="2641.6666666666665,1499" size="100,100">You come a fair ways upstream from the mouth of the river. The quiet swishing of the running water is highly familiar at this point. Just a bit farther along the north bank stand the of nets used to catch fish. Some trees provide on the bank provide shade from the warming sun above, but fail to stop the dazzling lights of the sun&#39;s reflection. 
 
 You walk along the bank to the fish nets and talk to the people weaving, repairing uncast nets and those watching the ones set up.
 
@@ -762,7 +943,14 @@ To your east, towards the mouth of the river is the edge of the camp that lines 
 
 [[Thunder Bay C]]
 [[Thunder Bay E]]
-[[Thunder Bay W]]
+[[Thunder Bay W]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 [[Talk to someone-&gt;Canadian Shield 3]]
 &lt;&lt;if $talkedToWind eq 1 and $fished eq 1&gt;&gt;\
@@ -774,7 +962,7 @@ You have fished already.\
 &lt;&lt;audio &quot;CS&quot; fadeoverto 2 3&gt;&gt;\
 &lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;CE&quot; fadeoverto 2 0&gt;&gt;\
-&lt;&lt;audio &quot;CN&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="32" name="Plains 1" tags="act_3_plains_a" position="2669,1767.6666666666667" size="100,100">You were forced to forsake your expected routes through rivers and tributaries by the wildfire. The road ahead will be travelled on foot and will take far longer than expected. Day by day you and Wind trudge along the stony ground, passing over streams and around lakes that populate the landscape.
+&lt;&lt;audio &quot;CN&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="32" name="Plains 1" tags="act_3_plains_a" position="2669,1767" size="100,100">You were forced to forsake your expected routes through rivers and tributaries by the wildfire. The road ahead will be travelled on foot and will take far longer than expected. Day by day you and Wind trudge along the stony ground, passing over streams and around lakes that populate the landscape.
 
 One night you ask Wind “What was that place, with the stone animals on the ground?”
 
@@ -782,63 +970,147 @@ One night you ask Wind “What was that place, with the stone animals on the gro
 
 “Yes I would”.
 
-[[Plains 2]]
+[[Plains 2]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="33" name="Plains 2" tags="act_3_plains_b" position="2542,1833" size="100,100">Wind starts a story about the creation of the world.
 Turtle Myth story.
 
-[[Plains 3]]
+[[Plains 3]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="34" name="Plains 3" tags="act_3_plains_c" position="2414,1920.3333333333333" size="100,100">The story Wind told about how the world came to be takes a while to digest. As a child, the church dictated that the world began with Gods six days of effort and that He brought the light. Though you never were that enamored with the Bible, you still took that as fact. That is not the case with the Wind and his people. They have only heard the word of God once Europeans came across the Atlantic. The question sits with you uneasily but you are thankful for the food for thought. The conundrum keeps you busy while you continue to walk.
+&lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="34" name="Plains 3" tags="act_3_plains_c" position="2414,1920" size="100,100">The story Wind told about how the world came to be takes a while to digest. As a child, the church dictated that the world began with Gods six days of effort and that He brought the light. Though you never were that enamored with the Bible, you still took that as fact. That is not the case with the Wind and his people. They have only heard the word of God once Europeans came across the Atlantic. The question sits with you uneasily but you are thankful for the food for thought. The conundrum keeps you busy while you continue to walk.
 
 After about a week, you notice the trees becoming less frequent and the rocky soil becoming softer and the nights becoming longer. Coming out of one stand of trees, a sea of grasses before you under a great open sky sprinkled with puffy white clouds.
 
 The days are long and at night you almost think the sun doesn’t set. One of the nights you think back again to the question that troubled you and ask Wind to explain more about the stories he was told when he was young.
 
-[[Plains 4]]
+[[Plains 4]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="35" name="Plains 4" tags="act_3_plains_d" position="2321,1752" size="100,100">Conversation about how most animals have some significance. Bring up that goats are symbolize endurance.
 
-[[Plains 5]]
+[[Plains 5]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="36" name="Plains 5" tags="act_3_plains_e" position="2200,1808" size="100,100">About a month of walking along the hot pararies makes you never want to see grass again. Great thunderstorms rattled your bones and the hot sun cooking you. And the bugs, goodness the bugs. They kept at you almost constantly, small ticks would latch onto your clothes and large mosquitoes bite at the exposed parts of your skin. At times you joke with Wind that he could use your body as signpost after the insects have sucked you dry. You could be seen for miles and miles around here!
 
 At some point, the days got shorter and the nights ever longer. The height of summer has passed.
 
-[[Plains 6]]
+[[Plains 6]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="37" name="Plains 6" tags="act_3_plains_end1" position="2065.6666666666665,1889" size="100,100">Another month of walking, Wind and yourself are travelling along the south shore of a river.
+&lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="37" name="Plains 6" tags="act_3_plains_end1" position="2065,1889" size="100,100">Another month of walking, Wind and yourself are travelling along the south shore of a river.
 Blackfoot tribe encounter, blackfoot and headpiece on horses. wind sights them. You are told to run. Indiscriminate yelling.
 
 
-[[Plains 7]]
+[[Plains 7]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="38" name="Plains 7" tags="act_3_plains_end2" position="1970.3333333333335,1751.3333333333333" size="100,100">trees and shield became less and less. after coming out a stand of trees, flat fields as far as the eye can see. maybe broken up by some trees. grasses
+&lt;!--&quot;A-Long-Walk&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="38" name="Plains 7" tags="act_3_plains_end2" position="1970,1751" size="100,100">trees and shield became less and less. after coming out a stand of trees, flat fields as far as the eye can see. maybe broken up by some trees. grasses
 
 come back and wind is dying/dead. Bury wind, leave a token of yours, take one of winds, leaves start to fall.
 
 (Passage document stops here)
 [[Plains 8]]
-[[Interlude 3]]
+[[Interlude 3]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;audio &quot;After-The-Storm&quot; fadeoverto 2 3&gt;&gt;\
 &lt;&lt;audio &quot;A-Long-Walk&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="39" name="Plains 8" tags="" position="1749,1693" size="100,100">easier walking now. herds in the distance.
 
-[[Plains 9]]
+[[Plains 9]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="40" name="Plains 9" tags="" position="1621,1693.3333333333333" size="100,100">[[Plains 10]]
+&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="40" name="Plains 9" tags="" position="1621,1693" size="100,100">[[Plains 10]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="41" name="Plains 10" tags="" position="1495,1692" size="100,100">[[Plains 11]]
+&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="41" name="Plains 10" tags="" position="1495,1692" size="100,100">[[Plains 11]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="42" name="Plains 11" tags="" position="1339.3333333333333,1695" size="100,100">at camp. wind and you forage. plains tribe encounter. wind tries to talk to them. wind warns you, you run. come back and wind is dying/dead.
+&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="42" name="Plains 11" tags="" position="1339,1695" size="100,100">at camp. wind and you forage. plains tribe encounter. wind tries to talk to them. wind warns you, you run. come back and wind is dying/dead.
 
-[[Plains 12]]
+[[Plains 12]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
-&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="43" name="Fort Augustus" tags="intro" position="2598.3333333333335,2252" size="100,100">You spent a couple of days at Fort Augustus and in that time the snow continued to fall. Softly at first giving the warm colours of autumn a dusting of white. The dusting turned into heavy blankets that knocked down the rest of the loose leaves and bent the branches low. A northerly wind carrying the light snow turned into icy daggers as the snowfall hastened. You can feel it in the log building that is your lodging and when you go out to help the North West Company men managing the settlement here. 
+&lt;!--&quot;All-Alone&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="43" name="Fort Augustus" tags="intro" position="2598,2252" size="100,100">You spent a couple of days at Fort Augustus and in that time the snow continued to fall. Softly at first giving the warm colours of autumn a dusting of white. The dusting turned into heavy blankets that knocked down the rest of the loose leaves and bent the branches low. A northerly wind carrying the light snow turned into icy daggers as the snowfall hastened. You can feel it in the log building that is your lodging and when you go out to help the North West Company men managing the settlement here. 
 
 You are stuck here, with company but without friends.
 
-[[Winter Corridor 1]] 
+[[Winter Corridor 1]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;!--&quot;A-Familiar-Sight&quot; - Still looping here--&gt;\
 
@@ -848,38 +1120,73 @@ In the night you sneak to the storehouse to find some dried food, some rope, a k
 
 You make your way out. Once out of sight of the fort, the pink glow of the morning glows behind you.
 
-[[Winter Corridor 2]] 
+[[Winter Corridor 2]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;&lt;audio &quot;A-Familiar-Sight&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;WP1&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="45" name="Winter Corridor 2" tags="act_4_w2" position="2297,2251" size="100,100">Every day is harder without someone to help with shelter, fire and food. Every step west brings you closer to the end. 
 
 . . .
 
-[[Winter Corridor 3]] 
+[[Winter Corridor 3]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;!--&quot;WP1&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="46" name="Winter Corridor 3" tags="b11 act_4_w3" position="2147,2247" size="100,100">A hard week of walking through snow has gotten you into view of the mountains. The long line of white peaks line the horizon. You thank God for the clear weather you have had, though the air kept its cold hard bite. 
 
  . . .
 
-[[Winter Corridor 4]] 
+[[Winter Corridor 4]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;&lt;audio &quot;WP1&quot; fadeoverto 2 0&gt;&gt;\
-&lt;&lt;audio &quot;WP2&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="47" name="Canadian Shield 1" tags="act_2_cs" position="2273.3333333333335,1183" size="100,100">Some stands of trees and rocks break up the geography the area. The rocky ground extends farther and farther. You look back to camp and find that it is a fair distance away and obscured by tall dusty brush.
+&lt;&lt;audio &quot;WP2&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="47" name="Canadian Shield 1" tags="act_2_cs" position="2273,1183" size="100,100">Some stands of trees and rocks break up the geography the area. The rocky ground extends farther and farther. You look back to camp and find that it is a fair distance away and obscured by tall dusty brush.
 
 You are on the shield of rock north of the river that flows past the camp. 
 
 [[Brush W]]
 
-[[Canadian Shield 2]]
+[[Canadian Shield 2]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;audio &quot;S&quot; fadeoverto 2 3&gt;&gt;\
-&lt;&lt;audio &quot;CNE&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="48" name="Prologue" tags="" position="2726,869" size="100,100">Given the kings quest.</tw-passagedata><tw-passagedata pid="49" name="Act 2 Start" tags="intro" position="2924.6666666666665,1078.3333333333333" size="100,100">After a few more weeks of canoeing, the tribe has reached its destination. A gathering of the tribe&#39;s wigwams is already established on the water&#39;s edge. The camp, if you would call the small town of wigwams a camp, is bustling with life. To the south of the camp a river bleeds into  the largest of the Great Lakes.
+&lt;&lt;audio &quot;CNE&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="48" name="Prologue" tags="" position="2726,869" size="100,100">Given the kings quest.</tw-passagedata><tw-passagedata pid="49" name="Act 2 Start" tags="intro" position="2924,1078" size="100,100">After a few more weeks of canoeing, the tribe has reached its destination. A gathering of the tribe&#39;s wigwams is already established on the water&#39;s edge. The camp, if you would call the small town of wigwams a camp, is bustling with life. To the south of the camp a river bleeds into  the largest of the Great Lakes.
 
 Thunder Bay, Baie du Tonnerre as the French called it. You don&#39;t know why it is called that, maybe Wind would know. As well, when you get to camp, you quite literally ache for a proper rest. You feel as though you could sleep a whole day. You inquire to Wind if you can borrow a hut, and you are graciously given one to yourself on the northern edge of camp.
 
 You roll out your bed roll, and keeping your coat and clothes on, you lay down to rest. The warm air lulls you to sleep.
 
-[[To Thunder Bay camp-&gt;Thunder Bay N]]
+[[To Thunder Bay camp-&gt;Thunder Bay N]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;set $talkedToWind to 0&gt;&gt;\
 &lt;&lt;set $talkedToOAF to 0&gt;&gt;\
@@ -896,7 +1203,7 @@ You roll out your bed roll, and keeping your coat and clothes on, you lay down t
 &lt;&lt;audio &quot;B2&quot; loop play volume 0&gt;&gt;\
 &lt;&lt;audio &quot;S&quot; loop play volume 0&gt;&gt;\
 &lt;&lt;audio &quot;FIRE&quot; loop play volume 0&gt;&gt;\
-&lt;&lt;audio &quot;Petroforms&quot; loop play volume 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="50" name="Interlude 1" tags="intro" position="2801.3333333333335,1079" size="100,100">After your introduction to the tribe you find yourself attempting to help out. You quickly find yourself at a loss of what you should be doing. While hunting, every person had a task and everyone worked together. Everyone except you. This was very different to when you were hunting with your father in the country back in England. You feel useless and the others give sidelong glances every so often. You are welcome, but not yet accepted. After some time twiddling your thumbs you make up your mind and head down to the canoes, at least there you can do some physical labour. Once by the surprisingly large watercrafts you motion to the other men that you want to help stock the canoes with camp supplies. They nod and a quiet relief touches you, as you find yourself useful. Once the canoes are full of --insert camp stuff that is taken--, all the tribe gets into the canoes. The large canoes are pushed off the bank, you help paddle, dipping the oar into the water and pulling against the water. 
+&lt;&lt;audio &quot;Petroforms&quot; loop play volume 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="50" name="Interlude 1" tags="intro" position="2801,1079" size="100,100">After your introduction to the tribe you find yourself attempting to help out. You quickly find yourself at a loss of what you should be doing. While hunting, every person had a task and everyone worked together. Everyone except you. This was very different to when you were hunting with your father in the country back in England. You feel useless and the others give sidelong glances every so often. You are welcome, but not yet accepted. After some time twiddling your thumbs you make up your mind and head down to the canoes, at least there you can do some physical labour. Once by the surprisingly large watercrafts you motion to the other men that you want to help stock the canoes with camp supplies. They nod and a quiet relief touches you, as you find yourself useful. Once the canoes are full of --insert camp stuff that is taken--, all the tribe gets into the canoes. The large canoes are pushed off the bank, you help paddle, dipping the oar into the water and pulling against the water. 
 
 You travel with Wind&#39;s tribe down the St.Lawrence river, each canoe taking several men to paddle against the stream. The days pass and you find yourself exceedingly sore. What soft upbringing you had in a nobleman&#39;s house compared to the effort it takes to live here in the wild. Most of every day is spent paddling against current, with nights spent for rest. A week passed and you land before a waterfall. Here you are told by Wind that everyone will have to carry the canoes to the next waterway. The work, again, is strenuous, but rewarding. 
 
@@ -904,7 +1211,14 @@ Another few days pass and you reach the &#39;waterway&#39;. A body of water so l
 
 Wind tells you that the destination of the tribe is on the other side of the lake. 
 
-[[Act 2 Start]] </tw-passagedata><tw-passagedata pid="51" name="Wind Convo 1" tags="act_2_tb_c" position="3201,1202.6666666666667" size="100,100">You approach your friend, “Hello Wind!” you ask.
+[[Act 2 Start]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; </tw-passagedata><tw-passagedata pid="51" name="Wind Convo 1" tags="act_2_tb_c" position="3201,1202" size="100,100">You approach your friend, “Hello Wind!” you ask.
 
 “tân’si William” Wind replies looking your way and continues to help the pair of elders.
 
@@ -919,7 +1233,14 @@ Wind tells you that the destination of the tribe is on the other side of the lak
 “Also, one of the men isn’t feeling well today and they need wîcih casting the nets down at the river. You can find them to the south of here” Wind explains to you.
 
 &lt;&lt;set $talkedToWind to 1&gt;&gt;\
-[[Thunder Bay C]] 
+[[Thunder Bay C]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;!--&quot;Wind-Takes&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="52" name="Testing grounds" tags="" position="2725,615" size="100,100">Add whatever
 
@@ -935,21 +1256,48 @@ Hello, this is set to 1
 [[Testing grounds]] </tw-passagedata><tw-passagedata pid="54" name="Test 2" tags="" position="2795,430" size="100,100">&lt;&lt;set $this to 0&gt;&gt;\
 Hello, this is set to 0
 
-[[Testing grounds]] </tw-passagedata><tw-passagedata pid="55" name="Fur Trade Shop (2)" tags="fort_image" position="1713,647" size="100,100">&quot;I can offer both!&quot; says the shopkeeper. The brown skinned man he was talking to previously leaves out the door. A bell rings that you didn&#39;t notice before when you walked in.
+[[Testing grounds]] </tw-passagedata><tw-passagedata pid="55" name="Fur Trade Shop (2)" tags="fort_image" position="1713,645.3333333333334" size="100,100">&quot;I can offer both!&quot; says the shopkeeper. The brown skinned man he was talking to previously leaves out the door. A bell rings that you didn&#39;t notice before when you walked in.
 
-&quot;Well I am on an errand. This errand requires me to go west. I gather that I would need supplies and guidance for that.&quot; [[You say.-&gt;Fur Trade Shop (3)]]</tw-passagedata><tw-passagedata pid="56" name="Fur Trade Shop (3)" tags="fort_image" position="1717,757" size="100,100">&quot;Mmmhmm, well I could get one of my contacts to help you with getting to Montréal-&quot;
+&quot;Well I am on an errand. This errand requires me to go west. I gather that I would need supplies and guidance for that.&quot; 
+
+[[You say.-&gt;Fur Trade Shop (3)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Fur Trade Shop (3)" tags="fort_image" position="1717,757" size="100,100">&quot;Mmmhmm, well I could get one of my contacts to help you with getting to Montréal-&quot;
 
 &quot;I am looking to go considerably further than that, sir. Across Rupert&#39;s Land to be a bit more precise.&quot; You interrupt. A look of surprise flashed on the older man&#39;s face.
 
 &quot;Very well, very well! That is quite an //errand// if I do say.&quot; The shopkeeper laughed. &quot;You&#39;re in luck, Wind just left.&quot;
 
-&quot;Wind, sir?&quot; [[You ask puzzled.-&gt;Fur Trade Shop (4)]] </tw-passagedata><tw-passagedata pid="57" name="Fur Trade Shop (4)" tags="fort_image" position="1717,870" size="100,100">The door was closed, there wasn&#39;t even a draft surprisingly.
+&quot;Wind, sir?&quot; 
+
+[[You ask puzzled.-&gt;Fur Trade Shop (4)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; </tw-passagedata><tw-passagedata pid="57" name="Fur Trade Shop (4)" tags="fort_image" position="1717,870" size="100,100">The door was closed, there wasn&#39;t even a draft surprisingly.
 
 &quot;Wind is his //name//. Him and his people are going the same way you are and they might take you if they are kind enough... And if you can hold your weight.&quot; He says. &quot;And it might go a long way to learn a bit of their language. Make you seem more friendly to their ways. Some of their people don&#39;t take too kindly to us, and mostly for good reason.&quot; The shopkeeper&#39;s face briefly fell grim, but perked up almost immediately.
 
 &quot;Wind said he was camped down the road that leads west, near the river&#39;s edge. If you see one of them, say tân’si.&quot; He says.
 
-&quot;tân’si?&quot; [[You repeat.-&gt;Fur Trade Shop (5)]]</tw-passagedata><tw-passagedata pid="58" name="Fur Trade Shop (5)" tags="fort_image" position="1717,985" size="100,100">&quot;Yes, just like that!&quot; the shopkeeper says with a chuckle. &quot;It&#39;s a type of hello to them. It should make a good impression.&quot;
+&quot;tân’si?&quot; 
+
+[[You repeat.-&gt;Fur Trade Shop (5)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Fur Trade Shop (5)" tags="fort_image" position="1717,985" size="100,100">&quot;Yes, just like that!&quot; the shopkeeper says with a chuckle. &quot;It&#39;s a type of hello to them. It should make a good impression.&quot;
 
 &quot;Thank you sir. You have been most kind and most helpful.&quot; You ask about supplies and the shopkeeper says that his contacts will be able to help you more than he can. It gives you a small bit of pause, how would you not need the European supplies going over what can only seem like half the world to the people here.
 
@@ -960,6 +1308,79 @@ You thank the old shopkeeper for his guidance and step out the door. You reach i
 	&lt;&lt;addToInv &quot;tân’si&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
+[[Start Going West-&gt;Quebec Farmland]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Cree Camp(3)" tags="camp" position="1187,968" size="100,100">&quot;Is your name Wind?&quot;
+
+&quot;My name is yôtin but in your tongue it means the feeling of wind.&quot; Wind proclaims.
+
+The little lady abruptly interrupts your conversation with Wind, &quot;kinôhtehkatân cî&quot; and again, &quot;kinôhtehkatân cî&quot;
+
+&quot;She is asking if you are hungry, are you hungry?&quot; Wind asks.
+
+ You realize you haven&#39;t eaten since arriving in Montréal. &quot;If you&#39;re planning on eating that tasty duck, then yes.&quot; 
+ 
+ [[You say.-&gt;Cree Camp (4)]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="OAF Convo" tags="act_2_fields" position="2213,1046" size="100,100">nothing yet.
+
+&lt;&lt;set $talkedToOAF to 1 &gt;&gt;\
+[[Observing Animal Fields]] 
+
+&lt;!--&quot;B2&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="61" name="Fish" tags="act_2_tb_fish" position="2800,1598" size="100,100">nothing yet.
+
+&lt;&lt;set $fished to 1&gt;&gt;\
+[[Thunder Bay Fishing]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
+
+&lt;!--&quot;CS&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="62" name="Sîsîpa Convo" tags="act_2_tb_c" position="3204,1554" size="100,100">Sîsîpa see you come up and calls over gesturing the need for your height.
+
+After your help, she gives you preserves.
+
+&lt;&lt;set $talkedToSîsîpa to 1&gt;&gt;\
+[[Thunder Bay C]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
+
+&lt;!--&quot;Wind-Takes&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="63" name="Wind Convo 2b" tags="act_2_tb_c" position="3204,1436" size="100,100">nothing yet.
+
+[[Thunder Bay C]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
+
+&lt;!--&quot;Wind-Takes&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="64" name="Wind Convo 2a" tags="act_2_tb_c" position="3202,1312.6666666666667" size="100,100">You go to talk to Wind again, but before you have the chance to speak another man calls out “--cree for the herds of caribou are moving 	north--”
+
+“Good news for you nitôtem, the herds are moving north.
+
+and ready to begin the next part of our adventure.
+
+[[Thunder Bay C]]\
 &lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
 	&lt;&lt;script&gt;&gt;
 		Dialog.setup(&#39;Journal&#39;);
@@ -968,44 +1389,7 @@ You thank the old shopkeeper for his guidance and step out the door. You reach i
 	&lt;&lt;/script&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
-[[Start Going West-&gt;Quebec Farmland]]</tw-passagedata><tw-passagedata pid="59" name="Cree Camp(3)" tags="camp" position="1187,968" size="100,100">&quot;Is your name Wind?&quot;
-
-&quot;My name is yôtin but in your tongue it means the feeling of wind.&quot; Wind proclaims.
-
-The little lady abruptly interrupts your conversation with Wind, &quot;kinôhtehkatân cî&quot; and again, &quot;kinôhtehkatân cî&quot;
-
-&quot;She is asking if you are hungry, are you hungry?&quot; Wind asks.
-
- You realize you haven&#39;t eaten since arriving in Montréal. &quot;If you&#39;re planning on eating that tasty duck, then yes.&quot; [[You say.-&gt;Cree Camp (4)]]</tw-passagedata><tw-passagedata pid="60" name="OAF Convo" tags="act_2_fields" position="2213,1046" size="100,100">nothing yet.
-
-&lt;&lt;set $talkedToOAF to 1 &gt;&gt;\
-[[Observing Animal Fields]] 
-
-&lt;!--&quot;B2&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="61" name="Fish" tags="act_2_tb_fish" position="2800.3333333333335,1598" size="100,100">nothing yet.
-
-&lt;&lt;set $fished to 1&gt;&gt;\
-[[Thunder Bay Fishing]] 
-
-&lt;!--&quot;CS&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="62" name="Sîsîpa Convo" tags="act_2_tb_c" position="3204,1554" size="100,100">Sîsîpa see you come up and calls over gesturing the need for your height.
-
-After your help, she gives you preserves.
-
-&lt;&lt;set $talkedToSîsîpa to 1&gt;&gt;\
-[[Thunder Bay C]] 
-
-&lt;!--&quot;Wind-Takes&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="63" name="Wind Convo 2b" tags="act_2_tb_c" position="3204,1436" size="100,100">nothing yet.
-
-[[Thunder Bay C]] 
-
-&lt;!--&quot;Wind-Takes&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="64" name="Wind Convo 2a" tags="act_2_tb_c" position="3202,1311.3333333333333" size="100,100">You go to talk to Wind again, but before you have the chance to speak another man calls out “--cree for the herds of caribou are moving 	north--”
-
-“Good news for you nitôtem, the herds are moving north.
-
-and ready to begin the next part of our adventure.
-
-[[Thunder Bay C]]
-
-&lt;!--&quot;Wind-Takes&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="65" name="Interlude 3" tags="intro" position="2785.6666666666665,2254.6666666666665" size="100,100">There is a heavy, crushed feeling in your chest as you head west. Many miles behind you the body of your friend rests underneath a small karn marking his resting place. It may not have been what he envisioned or what his people would have usually done, but it was what you could do. 
+&lt;!--&quot;Wind-Takes&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="65" name="Interlude 3" tags="intro" position="2785,2254" size="100,100">There is a heavy, crushed feeling in your chest as you head west. Many miles behind you the body of your friend rests underneath a small karn marking his resting place. It may not have been what he envisioned or what his people would have usually done, but it was what you could do. 
 
 Forward is your quest. Continuing towards sunset, as the leaves start to change.
 
@@ -1017,7 +1401,14 @@ Snow started to fall by the time you come across any form of civilization.The be
 
 As they paddled up to you, you start to explain that you need some food and shelter. Wary they take you aboard and paddle you across to the fledgling fort.
 
-[[Rest, you&#39;ll need it...-&gt;Fort Augustus]] 
+[[Rest, you&#39;ll need it...-&gt;Fort Augustus]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;&lt;audio &quot;After-The-Storm&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;A-Familiar-Sight&quot; loop play volume 3&gt;&gt;\
@@ -1025,33 +1416,61 @@ As they paddled up to you, you start to explain that you need some food and shel
 &lt;&lt;audio &quot;WP2&quot; loop play volume 0&gt;&gt;\
 &lt;&lt;audio &quot;There-Yet&quot; loop play volume 0&gt;&gt;\
 &lt;&lt;audio &quot;Mountain&quot; loop play volume 0&gt;&gt;\
-&lt;&lt;audio &quot;Goat&quot; loop play volume 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="66" name="Interlude 2" tags="intro" position="2869.6666666666665,1841" size="100,100">Words go here :)
+&lt;&lt;audio &quot;Goat&quot; loop play volume 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="66" name="Interlude 2" tags="intro" position="2869,1841" size="100,100">Words go here :)
 
-[[Journey across the plains-&gt;Plains 1]]
+[[Journey across the plains-&gt;Plains 1]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;audio &quot;A-Long-Walk&quot; loop play volume 3&gt;&gt;\
 &lt;&lt;audio &quot;Battle&quot; loop play volume 0&gt;&gt;\
 &lt;&lt;audio &quot;After-The-Storm&quot; loop play volume 0&gt;&gt;\
-&lt;&lt;audio &quot;All-Alone&quot; loop play volume 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="67" name="Winter Corridor 4" tags="b13 act_4_w4" position="2002,2240.3333333333335" size="100,100">For a week it was as if you didn’t get closer the mountain, their hazy image on the horizon never changing. Now you were traversing land that rolled with ancient waves. Now the feet of the mountains were coming into view. It was now that a thick, grey cloud obscured the peaks. Clouds like those could only mean more snow.
+&lt;&lt;audio &quot;All-Alone&quot; loop play volume 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="67" name="Winter Corridor 4" tags="b13 act_4_w4" position="2002,2240" size="100,100">For a week it was as if you didn’t get closer the mountain, their hazy image on the horizon never changing. Now you were traversing land that rolled with ancient waves. Now the feet of the mountains were coming into view. It was now that a thick, grey cloud obscured the peaks. Clouds like those could only mean more snow.
 
 You hastily prepare shelter, collect your snares and as much firewood as you can before the snow hits.
 
-[[Winter Corridor 5]] 
+[[Winter Corridor 5]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;!--&quot;WP2&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="68" name="Winter Corridor 5" tags="b14 act_4_w5" position="1856,2242" size="100,100">The snowfall lasted for a day. Cold wind that accompanied the snowstorm back at Fort Augustus did not join with this snowfall. Thick flakes drifted like feathers down to the ground, covering your leaning shelter with a fluffy roof. Even without fire, as any attempt was snuffed out by such large flakes, you felt comfortable under all the snow. As if it weighed the very air down, the snow made sounds thick and muffled.
 
 The peace of the day surrounds you.
 
-[[Winter Corridor 6]] 
+[[Winter Corridor 6]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
 &lt;&lt;audio &quot;WP2&quot; fadeoverto 2 0&gt;&gt;\
-&lt;&lt;audio &quot;There-Yet&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="69" name="Winter Corridor 6" tags="intro b14.2 act_4_w6" position="1717,2244.6666666666665" size="100,100">A bright sun and blowing wind greet you in the morning. The wind was warm and dry, like those in the midday sun of summer on the plains on your way here. The wind cleared the sky of the snowfall and gave you new life with its warmth. Such a wind was surreal to experience after the bitterness this land showed you before.
+&lt;&lt;audio &quot;There-Yet&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="69" name="Winter Corridor 6" tags="intro b14.2 act_4_w6" position="1717,2244" size="100,100">A bright sun and blowing wind greet you in the morning. The wind was warm and dry, like those in the midday sun of summer on the plains on your way here. The wind cleared the sky of the snowfall and gave you new life with its warmth. Such a wind was surreal to experience after the bitterness this land showed you before.
 
 With renewed vigor, you look up the glowing mountains and make your way to the closest grey and white topped mountains.
 
-[[Go towards the mountain-&gt;Mountain]] 
+[[Go towards the mountain-&gt;Mountain]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
 
-&lt;!--&quot;There-Yet&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="70" name="Mountain" tags="act_4_m" position="1575.6666666666667,2240" size="100,100">Half a day of hiking takes to the foot of the mountain. The range of mountains extended as far south as you could see coming here, and the west was obscured by their volume. 
+&lt;!--&quot;There-Yet&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="70" name="Mountain" tags="act_4_m" position="1575,2240" size="100,100">Half a day of hiking takes to the foot of the mountain. The range of mountains extended as far south as you could see coming here, and the west was obscured by their volume. 
 
 You stop.
 
@@ -1059,12 +1478,19 @@ You sit. Resting on a log, you take out your journal and the king&#39;s missive 
 
 . . . 
 
-[[You look up at a sound in front of you.-&gt;and Goat]]
+[[You look up at a sound in front of you.-&gt;and Goat]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 
 . . .
 
 &lt;&lt;audio &quot;There-Yet&quot; fadeoverto 2 0&gt;&gt;\
-&lt;&lt;audio &quot;Mountain&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="71" name="and Goat" tags="act_4_m b15" position="1444,2240" size="100,100">Why, why is it here now of all the mountains? When you thought you were sent here to die or never come back in a foolish hope of finishing an impossible task. The pitch black goat of the mountains steps sure footedly closer to you. You can feel a sort of reverence in its actions, you start to understand a little bit why this goat is sacred. You’ve seen black goats before, but this one seemed to be made of resolute rock.
+&lt;&lt;audio &quot;Mountain&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="71" name="and Goat" tags="act_4_m b15" position="1442.3333333333333,2240" size="100,100">Why, why is it here now of all the mountains? When you thought you were sent here to die or never come back in a foolish hope of finishing an impossible task. The pitch black goat of the mountains steps sure footedly closer to you. You can feel a sort of reverence in its actions, you start to understand a little bit why this goat is sacred. You’ve seen black goats before, but this one seemed to be made of resolute rock.
 
 It looks at you with inky eyes and stops short of your arm’s reach. 
 
@@ -1072,7 +1498,14 @@ It looks at you with inky eyes and stops short of your arm’s reach.
 
 [[Take the goat-&gt;Epilogue A]]
 
-[[Leave the goat-&gt;Epilogue B]]
+[[Leave the goat-&gt;Epilogue B]]\
+&lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		Dialog.setup(&#39;Journal&#39;);
+		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
+		Dialog.open();
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 &lt;&lt;if $necklace eq 0&gt;&gt;\
 necklace 1\
 &lt;&lt;elseif $necklace eq 1&gt;&gt;\
@@ -1084,7 +1517,7 @@ necklace 4\
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;audio &quot;Mountain&quot; fadeoverto 2 0&gt;&gt;\
-&lt;&lt;audio &quot;Goat&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="72" name="Unused Passages" tags="" position="1490,1528" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="73" name="Epilogue A" tags="intro" position="1284,2146.3333333333335" size="100,100">You stare back at the sacred goat. You have made your decision.
+&lt;&lt;audio &quot;Goat&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="72" name="Unused Passages" tags="" position="1490,1528" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="73" name="Epilogue A" tags="intro" position="1284,2146" size="100,100">You stare back at the sacred goat. You have made your decision.
 
 You look down at the necklace in your hand again, and bring your eyes back to the goat. You stand up, step towards it and reach out to its obsidian fur. 
 
@@ -1098,7 +1531,7 @@ With a weary heart, you step away from the goat. After several paces away you lo
 
 You start on your journey back east. Your thoughts drift from the missive in your coat pocket, the tribe you spent a month or more with and the man that you spent the better part of the year with.
 
-&lt;!--&quot;Goat&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="74" name="Epilogue B" tags="intro" position="1284,2290.3333333333335" size="100,100">You stare back at the sacred goat. You have made your decision.
+&lt;!--&quot;Goat&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="74" name="Epilogue B" tags="intro" position="1284,2290" size="100,100">You stare back at the sacred goat. You have made your decision.
 
 You get up, step towards it and reach out to its obsidian fur
 
@@ -1127,15 +1560,14 @@ You look up from your first few bits of the duck, the warm juices drip lightly d
 
 &quot;I am looking to go west.&quot;
 
+[[Interlude 1]]\
 &lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
 	&lt;&lt;script&gt;&gt;
 		Dialog.setup(&#39;Journal&#39;);
 		Dialog.wiki(&#39;&lt;&lt;inv&gt;&gt;&#39;);
 		Dialog.open();
 	&lt;&lt;/script&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-
-[[Interlude 1]] </tw-passagedata></tw-storydata>
+&lt;&lt;/link&gt;&gt; </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="\\s"===e?"\\S":e.replace(/^\[/,"[^"),r="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",n=r.replace("\\-",""),a=function(){return"("+r+"+)\\(([^\\)\\|\\n]+)\\):|("+r+"+):([^;\\|\\n]+);|((?:\\."+r+"+)+);|((?:#"+r+"+)+);"}();return Object.freeze({space:e,spaceNoTerminator:"[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:t,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:r,anyLetterStrict:n,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:a,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){!function(e){if(e&&e.prototype&&null==e.prototype.firstElementChild){var t=Node.ELEMENT_NODE;Object.defineProperty(e.prototype,"firstElementChild",{get:function(){for(var e=this.childNodes,r=0;r<e.length;++r){var n=e[r];if(n.nodeType===t)return n}return null}})}}(window.Node||window.Element)}(),function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=e&&function(){try{var e=document.createElement("audio").play();return e.catch(function(){}),e instanceof Promise}catch(e){}return!1}(),r=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),n=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),a=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),i=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),o=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),s=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,audioPromise:t,fileAPI:r,geolocation:n,mutationObserver:a,performance:i,touch:o,transitionEndEvent:s})}(),Visibility=function(){function e(){return Boolean(r&&document[r.hiddenProperty])}function t(){return r&&document[r.stateProperty]||"visible"}var r=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return null}();return Object.freeze(Object.defineProperties({},{isHidden:{value:e},state:{value:t},hiddenProperty:{value:r.hiddenProperty},stateProperty:{value:r.stateProperty},changeEvent:{value:r.changeEvent}}))}(),_ref3=function(){function e(t){if("object"!==(void 0===t?"undefined":_typeof(t))||null===t)return t;if(t instanceof String)return String(t);if(t instanceof Number)return Number(t);if(t instanceof Boolean)return Boolean(t);if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return t instanceof Array?r=new Array(t.length):t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){return r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){return r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){switch(n.nodeName.toUpperCase()){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===(void 0===e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){var n=jQuery(document.createElement("div")),a=jQuery(document.createElement("button")),i=jQuery(document.createElement("pre")),o=L10n.get("errorTitle")+": "+(t||"unknown error");return a.addClass("error-toggle").ariaClick({label:L10n.get("errorToggle")},function(){a.hasClass("enabled")?(a.removeClass("enabled"),i.attr({"aria-hidden":!0,hidden:"hidden"})):(a.addClass("enabled"),i.removeAttr("aria-hidden hidden"))}).appendTo(n),jQuery(document.createElement("span")).addClass("error").text(o).appendTo(n),jQuery(document.createElement("code")).text(r).appendTo(i),i.addClass("error-source").attr({"aria-hidden":!0,hidden:"hidden"}).appendTo(n),n.addClass("error-view").appendTo(e),console.warn(o+"\n\t"+r.replace(/\n/g,"\n\t")),!1}function i(e,t){var r=i;switch(void 0===e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){return"{ "+[].concat(_toConsumableArray(e)).map(function(e){var n=_slicedToArray(e,2),a=n[0],i=n[1];return r(a,t)+" → "+r(i,t)}).join(", ")+" }"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))
