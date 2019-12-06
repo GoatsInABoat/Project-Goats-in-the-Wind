@@ -410,6 +410,17 @@ To Start the Story
 &lt;&lt;cacheaudio &quot;A-New-Friend&quot; &quot;media/music/Tracks/Act_I/A New Friend.mp3&quot;&gt;&gt;\
 
 &lt;!--Act II--&gt;\
+&lt;&lt;cacheaudio &quot;Wind-Takes&quot; &quot;media/music/Tracks/Act_II/ Where the Wind Takes Me.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;CN&quot; &quot;media/music/Tracks/Act_II/CN.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;NE&quot; &quot;media/music/Tracks/Act_II/NE.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;CNE&quot; &quot;media/music/Tracks/Act_II/CNE.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;CS&quot; &quot;media/music/Tracks/Act_II/CS.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;B&quot; &quot;media/music/Tracks/Act_II/B.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;B2&quot; &quot;media/music/Tracks/Act_II/B2.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;S&quot; &quot;media/music/Tracks/Act_II/S.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;FIRE&quot; &quot;media/music/Tracks/Act_II/FIRE!.mp3&quot;&gt;&gt;\
+&lt;&lt;cacheaudio &quot;Petroforms&quot; &quot;media/music/Tracks/Act_II/Petroforms.mp3&quot;&gt;&gt;\
+
 &lt;!--Act III--&gt;\
 &lt;!--Act IV--&gt;\
 
@@ -451,7 +462,7 @@ You leave the //HMS Squallor&#39;s Respite// not knowing you will ever see them 
 &lt;&lt;audio &quot;Land-Ahoy&quot; loop play&gt;&gt;\
 
 [[Montreal (South East)]] 
-&lt;&lt;inv&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Montreal (South East)" tags="fort_image" position="2233,829" size="100,100">The docks, or the lack thereof as the ship came up against the stone embankment, spread out around you. A wharf, you remember the sailors calling it. People bustle back and forth, in and out of the warehouses and buildings around you. They remind you of your quest for the goat, and your need to go west.
+&lt;&lt;inv&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Montreal (South East)" tags="fort_image" position="2231.3333333333335,830.6666666666666" size="100,100">The docks, or the lack thereof as the ship came up against the stone embankment, spread out around you. A wharf, you remember the sailors calling it. People bustle back and forth, in and out of the warehouses and buildings around you. They remind you of your quest for the goat, and your need to go west.
 
 You are on the south east part of the city. Montréal stretches to the north and spreads out to the west. Immediately west is a large set of building and its accompanying grounds. To the north, more warehouses line the river&#39;s edge.\
 \
@@ -616,19 +627,34 @@ Sîsîpa looks busy.\
 [[Talk to Wind again 2-&gt;Wind Convo 2b]]
 [[Talk to Sîsîpa-&gt;Sîsîpa Convo]]\
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="Thunder Bay N" tags="act_2_tb_n" position="2800,1208" size="100,100">You stand outside of your small wigwam, taking in the spring air. Looking around yourself, you feel a pull to start the next leg of your journey amids the spattering of wigwams. 
+&lt;&lt;/if&gt;&gt;\
+
+&lt;!-- Stop other audio and play correct track --&gt;\
+&lt;&lt;audio &quot;Land-Ahoy&quot; fadeoverto 2 0&gt;&gt;\
+&lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="Thunder Bay N" tags="act_2_tb_n" position="2800,1209.6666666666667" size="100,100">You stand outside of your small wigwam, taking in the spring air. Looking around yourself, you feel a pull to start the next leg of your journey amids the spattering of wigwams. 
 
 You are on the northern edge of camp. To the south is the center of camp. The shoreline of the lake, with the camp extending to it, is to the east. To the west, the camp spreads to an edge of a field brush and stone.
 
 [[Thunder Bay C]]
 [[Thunder Bay E]]
-[[Thunder Bay W]]</tw-passagedata><tw-passagedata pid="22" name="Plains 12" tags="" position="1201,1694" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="Thunder Bay E" tags="act_2_tb_e" position="2843,1413" size="100,100">You are greeted by the light lapping of waves from the shoreline of the great lake. Along the beach, there are canoes that you used, laying upside down. The beach itself is pebbly, indicative of the stone that seems to make up a large part of the ground here. A coolness clings to the air around the water.
+[[Thunder Bay W]]
+
+&lt;!--&quot;CN&quot; - Still looping here--&gt;\
+&lt;&lt;audio &quot;CN&quot; fadeoverto 0 3&gt;&gt;\
+&lt;&lt;audio &quot;Land-Ahoy&quot; fadeoverto 2 0&gt;&gt;\
+&lt;&lt;audio &quot;Land-Ahoy&quot; fadeoverto 2 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="22" name="Plains 12" tags="" position="1201,1694" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="Thunder Bay E" tags="act_2_tb_e" position="2843,1413" size="100,100">You are greeted by the light lapping of waves from the shoreline of the great lake. Along the beach, there are canoes that you used, laying upside down. The beach itself is pebbly, indicative of the stone that seems to make up a large part of the ground here. A coolness clings to the air around the water.
 
 You are west of the camp center. To your west is the river with fishing past its delta. A path leads from the lakeshore to the northern edge of camp, where your wigwam is.
 
 [[Thunder Bay C]]
 [[Thunder Bay N]]
-[[Thunder Bay Fishing]]</tw-passagedata><tw-passagedata pid="24" name="Canadian Shield 4" tags="act_2_cs" position="2047,1323" size="100,100">After the smoke dissipates and the heat dies down, Wind goes to check on your campsite. On his return he says to you, “We will have to travel on foot now…” in a ____ tone. You start making your way off the hill, into the fortunately untouched forest below the summit.
+[[Thunder Bay Fishing]]
+
+&lt;!-- Stop other audio and play correct track --&gt;\
+&lt;&lt;audio &quot;CN&quot; fadeoverto 2 0&gt;&gt;\
+&lt;&lt;audio &quot;CS&quot; fadeoverto 2 0&gt;&gt;\
+&lt;&lt;audio &quot;Wind-Takes&quot; fadeoverto 2 0&gt;&gt;\
+&lt;&lt;audio &quot;CE&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="24" name="Canadian Shield 4" tags="act_2_cs" position="2047,1323" size="100,100">After the smoke dissipates and the heat dies down, Wind goes to check on your campsite. On his return he says to you, “We will have to travel on foot now…” in a ____ tone. You start making your way off the hill, into the fortunately untouched forest below the summit.
 
 After an hour or so of walking you come to a clearing. Small and medium stones were strewn all about in the clearing. Wind stops and you stop beside him.
 
@@ -775,7 +801,19 @@ You roll out your bed roll, and keeping your coat and clothes on, you lay down t
 &lt;&lt;set $talkedToWind to 0&gt;&gt;\
 &lt;&lt;set $talkedToOAF to 0&gt;&gt;\
 &lt;&lt;set $talkedToSîsîpa to 0&gt;&gt;\
-&lt;&lt;set $fished to 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="50" name="Interlude 1" tags="intro" position="2803,1079" size="100,100">After your introduction to the tribe you find yourself attempting to help out. You quickly find yourself at a loss of what you should be doing. While hunting, every person had a task and everyone worked together. Everyone except you. This was very different to when you were hunting with your father in the country back in England. You feel useless and the others give sidelong glances every so often. You are welcome, but not yet accepted. After some time twiddling your thumbs you make up your mind and head down to the canoes, at least there you can do some physical labour. Once by the surprisingly large watercrafts you motion to the other men that you want to help stock the canoes with camp supplies. They nod and a quiet relief touches you, as you find yourself useful. Once the canoes are full of --insert camp stuff that is taken--, all the tribe gets into the canoes. The large canoes are pushed off the bank, you help paddle, dipping the oar into the water and pulling against the water. 
+&lt;&lt;set $fished to 0&gt;&gt;\
+
+&lt;&lt;audio &quot;CN&quot; loop play volume 3&gt;&gt;\
+&lt;&lt;audio &quot;Wind-Takes&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;NE&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;CE&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;CNE&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;CS&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;B&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;B2&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;S&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;FIRE&quot; loop play volume 0&gt;&gt;\
+&lt;&lt;audio &quot;Petroforms&quot; loop play volume 0&gt;&gt;\</tw-passagedata><tw-passagedata pid="50" name="Interlude 1" tags="intro" position="2803,1079" size="100,100">After your introduction to the tribe you find yourself attempting to help out. You quickly find yourself at a loss of what you should be doing. While hunting, every person had a task and everyone worked together. Everyone except you. This was very different to when you were hunting with your father in the country back in England. You feel useless and the others give sidelong glances every so often. You are welcome, but not yet accepted. After some time twiddling your thumbs you make up your mind and head down to the canoes, at least there you can do some physical labour. Once by the surprisingly large watercrafts you motion to the other men that you want to help stock the canoes with camp supplies. They nod and a quiet relief touches you, as you find yourself useful. Once the canoes are full of --insert camp stuff that is taken--, all the tribe gets into the canoes. The large canoes are pushed off the bank, you help paddle, dipping the oar into the water and pulling against the water. 
 
 You travel with Wind&#39;s tribe down the St.Lawrence river, each canoe taking several men to paddle against the stream. The days pass and you find yourself exceedingly sore. What soft upbringing you had in a nobleman&#39;s house compared to the effort it takes to live here in the wild. Most of every day is spent paddling against current, with nights spent for rest. A week passed and you land before a waterfall. Here you are told by Wind that everyone will have to carry the canoes to the next waterway. The work, again, is strenuous, but rewarding. 
 
