@@ -100,66 +100,56 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="[Project Goats]" startnode="1" creator="Twine" creator-version="2.3.5" ifid="3B82888B-6FBE-4503-8B37-A3E1FAC8A4E5" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">// Styling dialog boxes
-// Ex: Logbook/Restart/Save
-#ui-dialog-titlebar {
-  color: white;
-}
+	<tw-storydata name="[Project Goats]" startnode="1" creator="Twine" creator-version="2.3.5" ifid="3B82888B-6FBE-4503-8B37-A3E1FAC8A4E5" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">// Styling dialog boxes 
+// Ex: Logbook/Restart/Save 
+#ui-dialog-titlebar {   
+  color: white; 
+}  
+#ui-dialog-close {   
+  color: red; 
+}  
+#ui-dialog-close:hover {   
+  color: white;   
+  background-color: red; 
+}  
+#ui-dialog-body {   
+  color: black;   
+  background-color: beige; 
+}  
+#saves-list button {   
+  color: white;   
+  background-color: red;   
+  border: None; 
+}  
+#saves-list button:hover {   
+  color: black;   
+  background-color: red;   
+  border: None; 
+}  
+#saves-list button:disabled {   
+  color: white;   
+  background-color: grey;   
+  border: None; 
+}  
 
-#ui-dialog-close {
-  color: red;
-}
+// Styling for font awesome icons 
+// Ex: Book/Save/Restart buttons 
+// Parent class is crucial .fa {
+}  
+.fa-floppy-o {  
+  color: white;  
+}  
+.fa-refresh {   
+  color: white; 
+}  
+.fa-book {   
+  color: white; 
+}  
+.fa:hover {   
+  color: red; 
+}  
 
-#ui-dialog-close:hover {
-  color: white;
-  background-color: red;
-}
-
-#ui-dialog-body {
-  color: black;
-  background-color: beige;
-}
-
-#saves-list button {
-  color: white;
-  background-color: red;
-  border: None;
-}
-
-#saves-list button:hover {
-  color: black;
-  background-color: red;
-  border: None;
-}
-
-#saves-list button:disabled {
-  color: white;
-  background-color: grey;
-  border: None;
-}
-
-// Styling for font awesome icons
-// Ex: Book/Save/Restart buttons
-// Parent class is crucial
-.fa {}
-
-.fa-floppy-o {
- color: white; 
-}
-
-.fa-refresh {
-  color: white;
-}
-
-.fa-book {
-  color: white;
-}
-
-.fa:hover {
-  color: red;
-}
-
-/* Background Images */
+/* Background Images */ 
 body[data-tags~="fort_image"] {
 	background-image: url("media/art/act 1/fort updated.jpg");
 	background-repeat: no-repeat;
@@ -314,6 +304,21 @@ body[data-tags~="act_4_m"] {
 	background-image: url("media/art/act 4/b15.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+}  
+body[data-tags~="intro"] {   
+  color: white; 
+}  
+body 
+{   
+  color: black;   
+  font-family: fantasy;   
+  text-shadow: 0px 0px 15px rgba(150, 150, 150, 1); 
+}  
+a {
+  color: #504B3A; 
+}  
+a:hover {   
+  color: #DDE392; 
 }
 
 body[data-tags~="intro"] {
@@ -322,6 +327,7 @@ body[data-tags~="intro"] {
 
 body {
   color: black;
+  
   
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// Destroy built-in UI, save and menu buttons will be included in story pages
@@ -592,7 +598,7 @@ You are on the northern edge of camp. To the south is the center of camp. The sh
 
 [[Thunder Bay C]]
 [[Thunder Bay E]]
-[[Thunder Bay W]]</tw-passagedata><tw-passagedata pid="22" name="Plains 12" tags="" position="1201.6666666666667,1694.6666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="Thunder Bay E" tags="act_2_tb_e" position="2843,1413" size="100,100">You are greeted by the light lapping of waves from the shoreline of the great lake. Along the beach, there are canoes that you used, laying upside down. The beach itself is pebbly, indicative of the stone that seems to make up a large part of the ground here. A coolness clings to the air around the water.
+[[Thunder Bay W]]</tw-passagedata><tw-passagedata pid="22" name="Plains 12" tags="" position="1201,1694" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="Thunder Bay E" tags="act_2_tb_e" position="2843,1413" size="100,100">You are greeted by the light lapping of waves from the shoreline of the great lake. Along the beach, there are canoes that you used, laying upside down. The beach itself is pebbly, indicative of the stone that seems to make up a large part of the ground here. A coolness clings to the air around the water.
 
 You are west of the camp center. To your west is the river with fishing past its delta. A path leads from the lakeshore to the northern edge of camp, where your wigwam is.
 
@@ -684,7 +690,7 @@ One night you ask Wind “What was that place, with the stone animals on the gro
 [[Plains 2]]</tw-passagedata><tw-passagedata pid="33" name="Plains 2" tags="act_3_plains_b" position="2542,1833" size="100,100">Wind starts a story about the creation of the world.
 Turtle Myth story.
 
-[[Plains 3]]</tw-passagedata><tw-passagedata pid="34" name="Plains 3" tags="act_3_plains_c" position="2414.3333333333335,1922.3333333333333" size="100,100">The story Wind told about how the world came to be takes a while to digest. As a child, the church dictated that the world began with Gods six days of effort and that He brought the light. Though you never were that enamored with the Bible, you still took that as fact. That is not the case with the Wind and his people. They have only heard the word of God once Europeans came across the Atlantic. The question sits with you uneasily but you are thankful for the food for thought. The conundrum keeps you busy while you continue to walk.
+[[Plains 3]]</tw-passagedata><tw-passagedata pid="34" name="Plains 3" tags="act_3_plains_c" position="2414,1922" size="100,100">The story Wind told about how the world came to be takes a while to digest. As a child, the church dictated that the world began with Gods six days of effort and that He brought the light. Though you never were that enamored with the Bible, you still took that as fact. That is not the case with the Wind and his people. They have only heard the word of God once Europeans came across the Atlantic. The question sits with you uneasily but you are thankful for the food for thought. The conundrum keeps you busy while you continue to walk.
 
 After about a week, you notice the trees becoming less frequent and the rocky soil becoming softer and the nights becoming longer. Coming out of one stand of trees, a sea of grasses before you under a great open sky sprinkled with puffy white clouds.
 
@@ -706,25 +712,25 @@ come back and wind is dying/dead. Bury wind, leave a token of yours, take one of
 
 (Passage document stops here)
 [[Plains 8]]
-[[Interlude 3]]</tw-passagedata><tw-passagedata pid="39" name="Plains 8" tags="" position="1749.3333333333335,1693.6666666666667" size="100,100">easier walking now. herds in the distance.
+[[Interlude 3]]</tw-passagedata><tw-passagedata pid="39" name="Plains 8" tags="" position="1749,1693" size="100,100">easier walking now. herds in the distance.
 
-[[Plains 9]]</tw-passagedata><tw-passagedata pid="40" name="Plains 9" tags="" position="1621.3333333333335,1695.3333333333335" size="100,100">[[Plains 10]]</tw-passagedata><tw-passagedata pid="41" name="Plains 10" tags="" position="1495.6666666666667,1692.6666666666667" size="100,100">[[Plains 11]]</tw-passagedata><tw-passagedata pid="42" name="Plains 11" tags="" position="1341.6666666666667,1695.6666666666667" size="100,100">at camp. wind and you forage. plains tribe encounter. wind tries to talk to them. wind warns you, you run. come back and wind is dying/dead.
+[[Plains 9]]</tw-passagedata><tw-passagedata pid="40" name="Plains 9" tags="" position="1621,1695" size="100,100">[[Plains 10]]</tw-passagedata><tw-passagedata pid="41" name="Plains 10" tags="" position="1495,1692" size="100,100">[[Plains 11]]</tw-passagedata><tw-passagedata pid="42" name="Plains 11" tags="" position="1341,1695" size="100,100">at camp. wind and you forage. plains tribe encounter. wind tries to talk to them. wind warns you, you run. come back and wind is dying/dead.
 
-[[Plains 12]]</tw-passagedata><tw-passagedata pid="43" name="Fort Augustus" tags="intro" position="2600,2252.3333333333335" size="100,100">You spent a couple of days at Fort Augustus and in that time the snow continued to fall. Softly at first giving the warm colours of autumn a dusting of white. The dusting turned into heavy blankets that knocked down the rest of the loose leaves and bent the branches low. A northerly wind carrying the light snow turned into icy daggers as the snowfall hastened. You can feel it in the log building that is your lodging and when you go out to help the North West Company men managing the settlement here. 
+[[Plains 12]]</tw-passagedata><tw-passagedata pid="43" name="Fort Augustus" tags="intro" position="2600,2252" size="100,100">You spent a couple of days at Fort Augustus and in that time the snow continued to fall. Softly at first giving the warm colours of autumn a dusting of white. The dusting turned into heavy blankets that knocked down the rest of the loose leaves and bent the branches low. A northerly wind carrying the light snow turned into icy daggers as the snowfall hastened. You can feel it in the log building that is your lodging and when you go out to help the North West Company men managing the settlement here. 
 
 You are stuck here, with company but without friends.
 
-[[Winter Corridor 1]] </tw-passagedata><tw-passagedata pid="44" name="Winter Corridor 1" tags="act_4_w1" position="2446,2250.3333333333335" size="100,100">The sky clears on the fourth day of snow. The wind dying as well has made the final trek to the mountains bearable now. You make your way out, asking for some supplies to help you along your way. The traders won’t give you anything without payment. 
+[[Winter Corridor 1]] </tw-passagedata><tw-passagedata pid="44" name="Winter Corridor 1" tags="act_4_w1" position="2446,2250" size="100,100">The sky clears on the fourth day of snow. The wind dying as well has made the final trek to the mountains bearable now. You make your way out, asking for some supplies to help you along your way. The traders won’t give you anything without payment. 
 
 In the night you sneak to the storehouse to find some dried food, some rope, a knife and an axe seemingly set aside. You don’t ponder long on why the Frenchmen wouldn’t have given you these things in the first place. You count your blessings and thank whomever set the supplies aside.
 
 You make your way out. Once out of sight of the fort, the pink glow of the morning glows behind you.
 
-[[Winter Corridor 2]] </tw-passagedata><tw-passagedata pid="45" name="Winter Corridor 2" tags="act_4_w2" position="2297,2251.3333333333335" size="100,100">Every day is harder without someone to help with shelter, fire and food. Every step west brings you closer to the end. 
+[[Winter Corridor 2]] </tw-passagedata><tw-passagedata pid="45" name="Winter Corridor 2" tags="act_4_w2" position="2297,2251" size="100,100">Every day is harder without someone to help with shelter, fire and food. Every step west brings you closer to the end. 
 
 . . .
 
-[[Winter Corridor 3]] </tw-passagedata><tw-passagedata pid="46" name="Winter Corridor 3" tags="b11 act_4_w3" position="2147,2247.3333333333335" size="100,100">A hard week of walking through snow has gotten you into view of the mountains. The long line of white peaks line the horizon. You thank God for the clear weather you have had, though the air kept its cold hard bite. 
+[[Winter Corridor 3]] </tw-passagedata><tw-passagedata pid="46" name="Winter Corridor 3" tags="b11 act_4_w3" position="2147,2247" size="100,100">A hard week of walking through snow has gotten you into view of the mountains. The long line of white peaks line the horizon. You thank God for the clear weather you have had, though the air kept its cold hard bite. 
 
  . . .
 
@@ -857,19 +863,19 @@ As they paddled up to you, you start to explain that you need some food and shel
 
 [[Rest, you&#39;ll need it...-&gt;Fort Augustus]] </tw-passagedata><tw-passagedata pid="66" name="Interlude 2" tags="intro" position="2868,1841" size="100,100">Words go here :)
 
-[[Journey across the plains-&gt;Plains 1]]</tw-passagedata><tw-passagedata pid="67" name="Winter Corridor 4" tags="b13 act_4_w4" position="2002,2242.3333333333335" size="100,100">For a week it was as if you didn’t get closer the mountain, their hazy image on the horizon never changing. Now you were traversing land that rolled with ancient waves. Now the feet of the mountains were coming into view. It was now that a thick, grey cloud obscured the peaks. Clouds like those could only mean more snow.
+[[Journey across the plains-&gt;Plains 1]]</tw-passagedata><tw-passagedata pid="67" name="Winter Corridor 4" tags="b13 act_4_w4" position="2002,2242" size="100,100">For a week it was as if you didn’t get closer the mountain, their hazy image on the horizon never changing. Now you were traversing land that rolled with ancient waves. Now the feet of the mountains were coming into view. It was now that a thick, grey cloud obscured the peaks. Clouds like those could only mean more snow.
 
 You hastily prepare shelter, collect your snares and as much firewood as you can before the snow hits.
 
-[[Winter Corridor 5]] </tw-passagedata><tw-passagedata pid="68" name="Winter Corridor 5" tags="b14 act_4_w5" position="1856,2242.3333333333335" size="100,100">The snowfall lasted for a day. Cold wind that accompanied the snowstorm back at Fort Augustus did not join with this snowfall. Thick flakes drifted like feathers down to the ground, covering your leaning shelter with a fluffy roof. Even without fire, as any attempt was snuffed out by such large flakes, you felt comfortable under all the snow. As if it weighed the very air down, the snow made sounds thick and muffled.
+[[Winter Corridor 5]] </tw-passagedata><tw-passagedata pid="68" name="Winter Corridor 5" tags="b14 act_4_w5" position="1856,2242" size="100,100">The snowfall lasted for a day. Cold wind that accompanied the snowstorm back at Fort Augustus did not join with this snowfall. Thick flakes drifted like feathers down to the ground, covering your leaning shelter with a fluffy roof. Even without fire, as any attempt was snuffed out by such large flakes, you felt comfortable under all the snow. As if it weighed the very air down, the snow made sounds thick and muffled.
 
 The peace of the day surrounds you.
 
-[[Winter Corridor 6]] </tw-passagedata><tw-passagedata pid="69" name="Winter Corridor 6" tags="intro b14.2 act_4_w6" position="1717,2243.3333333333335" size="100,100">A bright sun and blowing wind greet you in the morning. The wind was warm and dry, like those in the midday sun of summer on the plains on your way here. The wind cleared the sky of the snowfall and gave you new life with its warmth. Such a wind was surreal to experience after the bitterness this land showed you before.
+[[Winter Corridor 6]] </tw-passagedata><tw-passagedata pid="69" name="Winter Corridor 6" tags="intro b14.2 act_4_w6" position="1717,2243" size="100,100">A bright sun and blowing wind greet you in the morning. The wind was warm and dry, like those in the midday sun of summer on the plains on your way here. The wind cleared the sky of the snowfall and gave you new life with its warmth. Such a wind was surreal to experience after the bitterness this land showed you before.
 
 With renewed vigor, you look up the glowing mountains and make your way to the closest grey and white topped mountains.
 
-[[Go towards the mountain-&gt;Mountain]] </tw-passagedata><tw-passagedata pid="70" name="Mountain" tags="act_4_m" position="1574,2240.3333333333335" size="100,100">Half a day of hiking takes to the foot of the mountain. The range of mountains extended as far south as you could see coming here, and the west was obscured by their volume. 
+[[Go towards the mountain-&gt;Mountain]] </tw-passagedata><tw-passagedata pid="70" name="Mountain" tags="act_4_m" position="1574,2240" size="100,100">Half a day of hiking takes to the foot of the mountain. The range of mountains extended as far south as you could see coming here, and the west was obscured by their volume. 
 
 You stop.
 
@@ -880,7 +886,7 @@ You sit. Resting on a log, you take out your journal and the king&#39;s missive 
 [[You look up at a sound in front of you.-&gt;and Goat]]
 
 . . .
-</tw-passagedata><tw-passagedata pid="71" name="and Goat" tags="act_4_m b15" position="1444,2240.3333333333335" size="100,100">Why, why is it here now of all the mountains? When you thought you were sent here to die or never come back in a foolish hope of finishing an impossible task. The pitch black goat of the mountains steps sure footedly closer to you. You can feel a sort of reverence in its actions, you start to understand a little bit why this goat is sacred. You’ve seen black goats before, but this one seemed to be made of resolute rock.
+</tw-passagedata><tw-passagedata pid="71" name="and Goat" tags="act_4_m b15" position="1444,2240" size="100,100">Why, why is it here now of all the mountains? When you thought you were sent here to die or never come back in a foolish hope of finishing an impossible task. The pitch black goat of the mountains steps sure footedly closer to you. You can feel a sort of reverence in its actions, you start to understand a little bit why this goat is sacred. You’ve seen black goats before, but this one seemed to be made of resolute rock.
 
 It looks at you with inky eyes and stops short of your arm’s reach. 
 
@@ -897,7 +903,7 @@ necklace 2\
 necklace 3\
 &lt;&lt;elseif $necklace eq 3&gt;&gt;\
 necklace 4\
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Unused Passages" tags="" position="1490.0000000000002,1528.3333333333335" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="73" name="Epilogue A" tags="intro" position="1284,2148.666666666667" size="100,100">You stare back at the sacred goat. You have made your decision.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Unused Passages" tags="" position="1490,1528" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="73" name="Epilogue A" tags="intro" position="1284,2148" size="100,100">You stare back at the sacred goat. You have made your decision.
 
 You look down at the necklace in your hand again, and bring your eyes back to the goat. You stand up, step towards it and reach out to its obsidian fur. 
 
