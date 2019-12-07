@@ -1334,11 +1334,13 @@ The little lady abruptly interrupts your conversation with Wind, &quot;kinôhteh
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="OAF Convo" tags="act_2_fields" position="2213,1046" size="100,100">nothing yet.
 
 &lt;&lt;set $talkedToOAF to 1 &gt;&gt;\
+&lt;&lt;set $necklace++&gt;&gt;\
 [[Observing Animal Fields]] 
 
 &lt;!--&quot;B2&quot; - Still looping here--&gt;\</tw-passagedata><tw-passagedata pid="58" name="Fish" tags="act_2_tb_fish" position="2800,1598" size="100,100">nothing yet.
 
 &lt;&lt;set $fished to 1&gt;&gt;\
+&lt;&lt;set $necklace++&gt;&gt;\
 [[Thunder Bay Fishing]]\
 &lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
 	&lt;&lt;script&gt;&gt;
@@ -1357,6 +1359,7 @@ Extending her arm out with dried meat in her hand, “na kocihtâ” sîsîpa te
 Sîsîpa hands you a small pouch of dried meat.
 
 &lt;&lt;set $talkedToSîsîpa to 1&gt;&gt;\
+&lt;&lt;set $necklace++&gt;&gt;\
 [[Thunder Bay C]]\
 &lt;&lt;link &#39;&lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#39;&gt;&gt;
 	&lt;&lt;script&gt;&gt;
@@ -1479,7 +1482,16 @@ With renewed vigor, you look up the glowing mountains and make your way to the c
 
 You stop.
 
-You sit. Resting on a log, you take out your journal and the king&#39;s missive from your pocket. Quite a fool to get a goat on the other side of the world. You take out from underneath your shirt the string of leather that Wind/--Wind’s Cree name--. The --tokens from the tribe and Wind or just Wind’s token alone-- lay in your hand.
+You sit. Resting on a log, you take out your journal and the king&#39;s missive from your pocket. Quite a fool to get a goat on the other side of the world. You take out from underneath your shirt the string of leather that Wind gave you. \
+&lt;&lt;if $necklace eq 4&gt;&gt;\
+Token 1,2,3,4\
+&lt;&lt;elseif $necklace eq 3&gt;&gt;\
+Token 1,2,3\
+&lt;&lt;elseif $necklace eq 2&gt;&gt;\
+Token 1,2\
+&lt;&lt;else&gt;&gt;\
+Token 1\
+&lt;&lt;/if&gt;&gt;
 
 . . . 
 
@@ -1513,15 +1525,6 @@ It looks at you with inky eyes and stops short of your arm’s reach.
 		Dialog.open();
 	&lt;&lt;/script&gt;&gt;\
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;if $necklace eq 0&gt;&gt;\
-necklace 1\
-&lt;&lt;elseif $necklace eq 1&gt;&gt;\
-necklace 2\
-&lt;&lt;elseif $necklace eq 2&gt;&gt;\
-necklace 3\
-&lt;&lt;elseif $necklace eq 3&gt;&gt;\
-necklace 4\
-&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;audio &quot;Mountain&quot; fadeoverto 2 0&gt;&gt;\
 &lt;&lt;audio &quot;Goat&quot; fadeoverto 2 3&gt;&gt;\</tw-passagedata><tw-passagedata pid="69" name="Unused Passages" tags="" position="1343,1538" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="70" name="Epilogue A" tags="intro" position="1284,2146" size="100,100">You stare back at the sacred goat. You have made your decision.
